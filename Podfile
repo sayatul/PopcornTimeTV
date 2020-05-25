@@ -29,7 +29,6 @@ target 'PopcornTimetvOS' do
     platform :tvos, '10.2'
     pods
     pod 'TvOSMoreButton', '~> 1.2.0'
-    pod 'TVVLCKit', '~> 3.3.0'
     pod 'MBCircularProgressBar', '~> 0.3.5-1'
 end
 

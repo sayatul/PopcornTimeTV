@@ -27,7 +27,6 @@ PODS:
   - SwiftyJSON (4.2.0)
   - SwiftyTimer (2.1.0)
   - TvOSMoreButton (1.2.3)
-  - TVVLCKit (3.3.6)
   - XCDYouTubeKit (2.7.8)
 
 DEPENDENCIES:
@@ -48,11 +47,10 @@ DEPENDENCIES:
   - SwiftyJSON (~> 4.2.0)
   - SwiftyTimer (~> 2.1.0)
   - TvOSMoreButton (~> 1.2.0)
-  - TVVLCKit (~> 3.3.0)
   - XCDYouTubeKit (~> 2.7.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - 1PasswordExtension
     - Alamofire
     - AlamofireImage
@@ -68,7 +66,6 @@ SPEC REPOS:
     - SwiftyJSON
     - SwiftyTimer
     - TvOSMoreButton
-    - TVVLCKit
     - XCDYouTubeKit
   https://github.com/PopcornTimeTV/Specs:
     - FloatRatingView
@@ -104,9 +101,8 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   SwiftyTimer: 02dd6cf10cbc71cbf67cec494f6e5eb782102543
   TvOSMoreButton: 41fab9ceec49f0806e822ed4c78ac0634e16ff4e
-  TVVLCKit: c568ead8117ed607f837f1e9579500abe5fb4ed0
   XCDYouTubeKit: 43843b87c143120fdcbd908e031258ea60f7ba0a
 
-PODFILE CHECKSUM: a1056f59234ef2ef5db8e470cf1d52893eeffa0d
+PODFILE CHECKSUM: 500c85ab2116f19ff42bc25872d6fc730d6bb7d0
 
-COCOAPODS: 1.8.0
+COCOAPODS: 1.5.3

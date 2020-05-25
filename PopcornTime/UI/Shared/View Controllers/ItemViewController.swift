@@ -184,16 +184,23 @@ class ItemViewController: UIViewController, PTTorrentDownloadManagerListener {
     
     @IBAction func download(_ sender: DownloadButton) {
         if sender.downloadState == .normal {
+
             AppDelegate.shared.chooseQuality(sender, media: media) { [unowned self] (torrent) in
-                PTTorrentDownloadManager.shared().startDownloading(fromFileOrMagnetLink: torrent.url, mediaMetadata: self.media.mediaItemDictionary)
-                sender.downloadState = .pending
+
+                let pasteboard = UIPasteboard.general
+                pasteboard.string = torrent.url
+                let vc = UIAlertController(title: "Magnet Url Copied".localized, message: torrent.url, preferredStyle: .alert)
+                vc.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                self.present(vc, animated: true)
+                /* PTTorrentDownloadManager.shared().startDownloading(fromFileOrMagnetLink: torrent.url, mediaMetadata: self.media.mediaItemDictionary) */
+                /* sender.downloadState = .pending */
             }
+
         } else if let download = media.associatedDownload {
             AppDelegate.shared.downloadButton(sender, wasPressedWith: download)
         }
     }
-    
-    
+
     // MARK: - PTTorrentDownloadManagerListener
     
     func torrentStatusDidChange(_ torrentStatus: PTTorrentStatus, for download: PTTorrentDownload) {
